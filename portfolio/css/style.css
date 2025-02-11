@@ -1,0 +1,402 @@
+/* Custom Styles for a Modern Portfolio with Animations and Transitions */
+
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #f4f4f4;
+}
+
+/* Smooth Link Transitions */
+a {
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #0056b3;
+}
+
+/* Navigation */
+.navbar {
+  transition: background-color 0.3s ease;
+}
+.navbar-brand {
+  font-weight: bold;
+}
+.navbar-dark .navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffc107;
+}
+
+/* Hero Section with Static Background */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?city,technology') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Overlay to Darken the Background */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Hacking Slicing Texts Background Effect */
+.hacking-texts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.hacking-texts .hacking-text {
+  position: absolute;
+  font-size: 1rem;
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.8;
+  animation: sliceText 6s linear infinite;
+}
+
+/* Base text color */
+.hacking-texts .hacking-text {
+  color: #d4d4d4; /* Light gray for regular text */
+}
+
+/* Keywords */
+.hacking-texts .hacking-text .keyword {
+  color: #c586c0; /* Pink for keywords like function, const, if */
+}
+
+/* Types and classes */
+.hacking-texts .hacking-text .type {
+  color: #4ec9b0; /* Teal for types/classes */
+}
+
+/* Functions */
+.hacking-texts .hacking-text .function {
+  color: #dcdcaa; /* Light yellow for function names */
+}
+
+/* Strings */
+.hacking-texts .hacking-text .string {
+  color: #ce9178; /* Orange for strings */
+}
+
+/* Variables */
+.hacking-texts .hacking-text .variable {
+  color: #9cdcfe; /* Light blue for variables */
+}
+
+/* Comments */
+.hacking-texts .hacking-text .comment {
+  color: #6a9955; /* Green for comments */
+}
+
+/* Decorators/Annotations */
+.hacking-texts .hacking-text .decorator {
+  color: #569cd6; /* Blue for decorators */
+}
+
+/* Operators and punctuation */
+.hacking-texts .hacking-text .operator {
+  color: #d4d4d4; /* Light gray for operators */
+}
+
+.hacking-texts .hacking-text.left {
+  left: 10%;
+}
+
+.hacking-texts .hacking-text.right {
+  right: -5%;
+}
+
+.hacking-texts .hacking-text:nth-child(1),
+.hacking-texts .hacking-text:nth-child(7) {
+  top: 20%;
+}
+.hacking-texts .hacking-text:nth-child(2),
+.hacking-texts .hacking-text:nth-child(8) {
+  top: 25%;
+}
+.hacking-texts .hacking-text:nth-child(3),
+.hacking-texts .hacking-text:nth-child(9) {
+  top: 40%;
+}
+.hacking-texts .hacking-text:nth-child(4),
+.hacking-texts .hacking-text:nth-child(10) {
+  top: 60%;
+}
+.hacking-texts .hacking-text:nth-child(5),
+.hacking-texts .hacking-text:nth-child(11) {
+  top: 75%;
+}
+.hacking-texts .hacking-text:nth-child(6),
+.hacking-texts .hacking-text:nth-child(12) {
+  top: 90%;
+}
+
+/* Left side text positioning */
+.hacking-texts .hacking-text.left:nth-child(1) {
+  top: 10%;
+  left: 5%;
+}
+.hacking-texts .hacking-text.left:nth-child(2) {
+  top: 30%;
+  left: 10%;
+}
+.hacking-texts .hacking-text.left:nth-child(3) {
+  top: 50%;
+  left: 8%;
+}
+.hacking-texts .hacking-text.left:nth-child(4) {
+  top: 70%;
+  left: 12%;
+}
+
+/* Right side text positioning */
+.hacking-texts .hacking-text.right:nth-child(5) {
+  top: 15%;
+  right: 10%;
+}
+.hacking-texts .hacking-text.right:nth-child(6) {
+  top: 35%;
+  right: 5%;
+}
+.hacking-texts .hacking-text.right:nth-child(7) {
+  top: 55%;
+  right: 15%;
+}
+.hacking-texts .hacking-text.right:nth-child(8) {
+  top: 75%;
+  right: 10%;
+}
+
+/* Top side text positioning */
+.hacking-texts .hacking-text.top:nth-child(9) {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Bottom side text positioning */
+.hacking-texts .hacking-text.bottom:nth-child(10) {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Bottom side text positioning for .NET code snippets */
+.hacking-texts .hacking-text.bottom:nth-child(11) {
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hacking-texts .hacking-text.bottom:nth-child(12) {
+  bottom: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hacking-texts .hacking-text.bottom:nth-child(13) {
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Base text styles */
+.hacking-texts .hacking-text {
+  font-size: 1rem;
+  max-width: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.8;
+}
+
+@keyframes sliceText {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+    clip-path: inset(0 100% 0 0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    clip-path: inset(30% 0 30% 0);
+  }
+  90% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+/* Cursor Effect Styles */
+.cursor-effect {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,123,255,0.4) 0%, rgba(0,123,255,0) 70%);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, background 0.3s ease;
+}
+
+/* Concentrated Effect on Click */
+.cursor-effect.concentrated {
+  background: radial-gradient(circle, rgba(0,123,255,0.8) 0%, rgba(0,123,255,0) 70%);
+}
+
+/* Hero Content (above the background effects) */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.hero-content h1 {
+  position: relative;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  transition: text-shadow 0.3s ease;
+}
+
+.hero-content h1:hover {
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 
+               0 0 20px rgba(0, 123, 255, 0.5), 
+               0 0 30px rgba(0, 123, 255, 0.3);
+}
+
+.hero-content p {
+  position: relative;
+  font-size: 1.5rem;
+  transition: text-shadow 0.3s ease;
+}
+
+.hero-content p:hover {
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 
+               0 0 20px rgba(0, 123, 255, 0.5), 
+               0 0 30px rgba(0, 123, 255, 0.3);
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #0d6efd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Section Padding */
+section {
+  padding: 80px 0;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+/* Experience and Project Items */
+.experience-item, .project-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.experience-item:hover, .project-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+}
+footer p {
+  margin: 0;
+}
+
+.highlight {
+  color: #00ff00; /* Bright green to emphasize */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 
+               0 0 20px rgba(0, 255, 0, 0.5); /* Optional glow effect */
+}
+
+.code-highlight {
+  font-family: 'Consolas', 'Monaco', monospace; /* Monospace font for code */
+  color: #d4d4d4; /* Light gray for code text */
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue background */
+  padding: 0.01em 0.01em; /* Reduced padding for a smaller background */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional shadow for depth */
+}
+
+.profile-photo {
+  display: none; /* Hide the photo initially */
+  position: absolute; /* Position it absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+  width: 200px; /* Set a larger width for the photo */
+  border-radius: 50%; /* Optional: make it circular */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+  z-index: 10; /* Ensure it appears above other content */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for scaling and opacity */
+  opacity: 0; /* Start with opacity 0 */
+}
+
+.profile-photo.show {
+  transform: translate(-50%, -50%) scale(1.2); /* Scale to a larger size */
+  opacity: 1; /* Fade in */
+} 

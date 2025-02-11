@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kadir Tuna - Back-End Developer Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kadir Tuna</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Static Background, Hacking Slicing Texts, and Interactive Cursor Effect -->
+    <header class="hero-section d-flex align-items-center">
+      <div class="hero-overlay"></div>
+      <!-- Hacking Slicing Texts -->
+      <div class="hacking-texts">
+        <!-- Left side -->
+        <span class="hacking-text left" style="animation-delay: 0s;">
+          <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">'/api/data'</span>);
+        </span>
+        <span class="hacking-text left" style="animation-delay: 1s;">
+          <span class="keyword">def</span> process_data(<span class="parameter">self</span>, <span class="parameter">data</span>): <span class="keyword">return</span> data
+        </span>
+        <span class="hacking-text left" style="animation-delay: 2s;">
+          <span class="keyword">public</span> <span class="keyword">async</span> <span class="type">Task</span><<span class="type">IActionResult</span>> <span class="function">Post</span>()
+        </span>
+        <span class="hacking-text left" style="animation-delay: 3s;">
+          <span class="annotation">@Override</span> <span class="keyword">protected</span> <span class="type">void</span> <span class="function">onCreate</span>()
+        </span>
+
+        <!-- Right side -->
+        <span class="hacking-text right" style="animation-delay: 4s;">
+          <span class="keyword">interface</span> <span class="type">IDataService</span> <span class="keyword">extends</span> <span class="type">IService</span>
+        </span>
+        <span class="hacking-text right" style="animation-delay: 5s;">
+          <span class="annotation">@api_view</span>(<span class="string">['GET']</span>) <span class="keyword">def</span> <span class="function">get_data</span>():
+        </span>
+        <span class="hacking-text right" style="animation-delay: 6s;">
+          <span class="variable">users</span>.<span class="function">Where</span>(<span class="parameter">u</span> => <span class="parameter">u</span>.<span class="property">IsActive</span>)
+        </span>
+        <span class="hacking-text right" style="animation-delay: 7s;">
+          <span class="keyword">FROM</span> <span class="image">node</span>:<span class="version">16</span>-<span class="tag">alpine</span>
+        </span>
+
+        <!-- Top side -->
+        <span class="hacking-text top" style="animation-delay: 8s;">
+          <span class="keyword">public</span> <span class="keyword">async</span> <span class="type">Task</span><<span class="type">bool</span>> <span class="function">ValidateAsync</span>()
+        </span>
+
+        <!-- Bottom side -->
+        <span class="hacking-text bottom" style="animation-delay: 9s;">
+          <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">Users</span> <span class="keyword">WHERE</span> <span class="column">active</span> = <span class="value">true</span>;
+        </span>
+
+        <!-- Bottom side .NET code snippets -->
+        <span class="hacking-text bottom" style="animation-delay: 10s;">
+          <span class="keyword">public</span> <span class="keyword">class</span> <span class="type">User</span> <span class="keyword">: </span><span class="type">IUser</span>
+        </span>
+        <span class="hacking-text bottom" style="animation-delay: 11s;">
+          <span class="keyword">public</span> <span class="keyword">async</span> <span class="type">Task</span><<span class="type">IActionResult</span>> <span class="function">GetUser</span>(<span class="parameter">int id</span>)
+        </span>
+        <span class="hacking-text bottom" style="animation-delay: 12s;">
+          <span class="keyword">var</span> <span class="variable">user</span> = <span class="keyword">await</span> <span class="variable">_context</span>.<span class="property">Users</span>.<span class="function">FindAsync</span>(<span class="parameter">id</span>);
+        </span>
+      </div>
+      <!-- Cursor effect element -->
+      <div class="cursor-effect"></div>
+      <div class="container text-center hero-content">
+        <h1 class="display-3 animate-fadeInDown">
+          Hi, I'm <span class="code-highlight">Kadir Tuna</span>
+        </h1>
+        <p class="lead animate-fadeInUp">Back-End Developer</p>
+        <img src="https://kadirtuna.com.tr/img/foto.png" alt="Kadir Tuna" class="profile-photo" />
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 animate-fadeInUp">
+      <div class="container">
+        <h2 class="mb-4 section-title">About Me</h2>
+        <p>
+          Possessing a strong foundation in Electrical-Electronics and Computer Engineering, my academic journey began in Electrical-Electronics Engineering, followed by a transition to a double major in Computer Engineering. As an Erasmus student at Rezekne Technologies Academy in Latvia, I expanded my knowledge of Computer Science, working alongside peers from diverse cultural and academic backgrounds.
+        </p>
+        <p>
+          With professional experience in back-end development, I focus on Deep Learning (CNNs, LLMs), Algorithm Design, and back-end development, while continuously improving my skills in Low-Level Languages (C, C++). My long-term goal is to advance as a senior back-end developer, specializing in microservices.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-light py-5 animate-fadeInUp">
+      <div class="container">
+        <h2 class="mb-4 section-title">Education</h2>
+        <div class="education-item mb-4">
+          <h4>Master's in Computer Engineering (30% English)</h4>
+          <p>Gebze Technical University (GTU)</p>
+          <small>September 2024 - Present</small>
+          <p>GPA: 3.83/4</p>
+        </div>
+        <div class="education-item mb-4">
+          <h4>Bachelor's in Computer Engineering (Double Major)</h4>
+          <p>Pamukkale University</p>
+          <small>September 2018 - December 2023</small>
+          <p>GPA: 3.58/4.00</p>
+        </div>
+        <div class="education-item mb-4">
+          <h4>Bachelor's in Electrical–Electronics Engineering</h4>
+          <p>Pamukkale University</p>
+          <small>September 2018 - December 2023</small>
+          <p>GPA: 3.21/4.00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 animate-fadeInUp">
+      <div class="container">
+        <h2 class="mb-4 section-title">Experience</h2>
+        <div class="experience-item mb-4">
+          <h4>Back-End Developer - Ayasofyazilim (Bilisim Vadisi)</h4>
+          <small>February 2024 - Present</small>
+          <p>
+            Developed and maintained back-end services using .NET, EF Core, Microservice Architecture, Layered Architecture, ABP Framework, MongoDB, MSSQL, Redis, Docker, Linux, DDD, OOP, SaaS (Multi-Tenancy), Unit Test, Integration Test, DevOps and GitHub Actions.
+          </p>
+        </div>
+        <div class="experience-item mb-4">
+          <h4>OOP Engineer Intern - IMEYT, Baykar Technologies</h4>
+          <small>October 2023 - December 2023</small>
+          <p>
+            Designed algorithms and tested performance using C# WPF, Geoprocessing, Python, and Socket Programming.
+          </p>
+        </div>
+        <div class="experience-item mb-4">
+          <h4>Software Developer Intern - R&D Department, SAMM Technology</h4>
+          <small>July 2023 - September 2023</small>
+          <p>
+            Developed applications using C# ASP.NET Core, HTML/CSS, JavaScript, Bootstrap5, EF Core, and MSSQL. Utilized Docker, Docker Compose, and Docker Swarm for containerization and orchestration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light py-5 animate-fadeInUp">
+      <div class="container">
+        <h2 class="mb-4 section-title">Skills</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Core Technologies</h4>
+            <ul>
+              <li>C# - .NET Core, ASP.Net Core, WPF, Win Forms, ABP, EF Core</li>
+              <li>C / C++ - Junior to Mid</li>
+              <li>Python – PyQt, Numpy, Pandas</li>
+              <li>WEB - HTML, CSS, JavaScript, React</li>
+              <li>MSSQL, PostgreSQL, MongoDB</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4>Additional Skills</h4>
+            <ul>
+              <li>Redis Caching, Microservices Architecture</li>
+              <li>IPC - Socket Programming, Message Brokers</li>
+              <li>API – REST, Postman</li>
+              <li>VCS - Git / GitHub</li>
+              <li>Software Testing – Unit, Integration</li>
+              <li>Docker - Compose, Swarm</li>
+              <li>OOP & Design Patterns</li>
+              <li>Geographic Tools (GIS) - Beginner</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 animate-fadeInUp">
+      <div class="container">
+        <h2 class="mb-4 section-title">Projects</h2>
+        <div class="project-item mb-4">
+          <h4>GUI Design and App Integration - Algan UAV Teknofest Team</h4>
+          <p>
+            Developed a GUI to display telemetry data and camera snapshots from the UAV. Implemented using OOP Design, PyQt5, UI/UX, AI integration, OpenCV, YOLO Model, TCP/UDP Socket Programming, FFMPEG, and Code Integration.
+          </p>
+        </div>
+        <div class="project-item mb-4">
+          <h4>People Counter Server Broadcast (Graduation Thesis)</h4>
+          <p>
+            Created a Python Flask server that processes video frames to detect and count people using a custom YOLO Object Detection Model. Tools used: Python, Numpy, Pandas, Flask, YOLO v3–v7.
+          </p>
+        </div>
+        <div class="project-item mb-4">
+          <h4>Cargo Management WEB API</h4>
+          <p>
+            Developed a RESTful API for automating cargo order progress and selecting the cheapest carrier using ASP.NET Web API, MSSQL, Swagger API, EF Core (Code First), Hangfire Cron Jobs, Async Programming, Repository Pattern, 3-Layered Architecture.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5 animate-fadeInUp">
+      <div class="container">
+        <h2 class="mb-4 section-title">Contact</h2>
+        <p>Email: <a href="mailto:kadirtunaceeng@gmail.com">kadirtunaceeng@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kadirtuna" target="_blank">Kadir Tuna</a></p>
+        <p>Languages: Turkish (Native), English (B2 Level - YOKDIL: 76.25/100)</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Kadir Tuna. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom Script for Interactive Cursor Circle Effect -->
+    <script>
+      const heroSection = document.querySelector('.hero-section');
+      const cursorEffect = document.querySelector('.cursor-effect');
+
+      // Update the position of the circular effect element on mousemove
+      heroSection.addEventListener('mousemove', function(e) {
+        const rect = heroSection.getBoundingClientRect();
+        const posX = e.clientX - rect.left;
+        const posY = e.clientY - rect.top;
+        cursorEffect.style.left = posX + 'px';
+        cursorEffect.style.top = posY + 'px';
+      });
+
+      // Change the cursor effect on click
+      heroSection.addEventListener('click', function() {
+        cursorEffect.classList.add('concentrated');
+        setTimeout(() => {
+          cursorEffect.classList.remove('concentrated');
+        }, 300); // Duration of the concentrated effect
+      });
+    </script>
+
+    <!-- Hero Section with Gradient Background -->
+    <style>
+      .hero-section {
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(135deg, #1a1a1a, #333, #1a1a1a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .hero-content h1 {
+        display: inline-block;
+        white-space: nowrap;
+        margin: 0 auto;  /* Centers the h1 horizontally */
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const middleText = document.querySelector('.hero-content h1');
+        const profilePhoto = document.querySelector('.profile-photo');
+        let isHovering = false;
+
+        const showPhoto = () => {
+          isHovering = true;
+          profilePhoto.style.display = 'block';
+          setTimeout(() => {
+            if (isHovering) {
+              profilePhoto.classList.add('show');
+            }
+          }, 10);
+        };
+
+        const hidePhoto = () => {
+          isHovering = false;
+          profilePhoto.classList.remove('show');
+          setTimeout(() => {
+            if (!isHovering) {
+              profilePhoto.style.display = 'none';
+            }
+          }, 300);
+        };
+
+        // Create a container that encompasses both the text and photo
+        const container = document.createElement('div');
+        container.style.position = 'relative';
+        middleText.parentNode.insertBefore(container, middleText);
+        container.appendChild(middleText);
+        container.appendChild(profilePhoto);
+
+        // Single event listeners for the container
+        container.addEventListener('mouseenter', showPhoto);
+        container.addEventListener('mouseleave', hidePhoto);
+      });
+    </script>
+  </body>
+</html> 
