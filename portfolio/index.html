@@ -80,10 +80,10 @@
     <!-- Add these styles -->
     <style>
       .navbar {
-        padding: 0.5rem 0;
+        height: 60px; /* Fixed navbar height */
+        padding: 0;
         background: linear-gradient(to right, #1a1a1a, #2d2d2d) !important;
         border-bottom: 2px solid #0066cc;
-        min-height: 60px;
       }
 
       .navbar-brand {
@@ -166,8 +166,10 @@
       section {
         position: relative;
         padding: 4rem 0;
+        margin-top: 0;
         background: linear-gradient(to right, #1a1a1a, #2d2d2d);
         border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+        scroll-margin-top: 60px;
       }
 
       section.bg-light {
@@ -191,8 +193,15 @@
 
       /* Hero Section */
       .hero-section {
+        position: relative;
+        height: calc(100vh - 60px);
+        padding: 0;
+        margin-top: 60px;
         background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1a1a1a) !important;
-        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
         border-bottom: 2px solid #0066cc;
       }
 
@@ -321,6 +330,15 @@
 
       /* Responsive Adjustments */
       @media (max-width: 768px) {
+        .navbar {
+          height: 50px; /* Slightly smaller on mobile */
+        }
+
+        .hero-section {
+          height: calc(100vh - 50px);
+          margin-top: 50px;
+        }
+
         .section-title {
           font-size: 1.8rem;
         }
@@ -331,6 +349,192 @@
 
         .project-item, .experience-item, .education-item {
           padding: 1rem;
+        }
+      }
+    </style>
+
+    <!-- Add these responsive styles -->
+    <style>
+      /* General Responsive Adjustments */
+      @media (max-width: 1200px) {
+        .container {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      /* Tablet Adjustments */
+      @media (max-width: 991px) {
+        .navbar-brand {
+          font-size: 1.1rem;
+        }
+
+        .typing-text {
+          font-size: 0.75rem;
+        }
+
+        .hero-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .project-item, .experience-item, .education-item {
+          padding: 1.2rem;
+        }
+      }
+
+      /* Mobile Adjustments */
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 0.3rem 0;
+        }
+
+        .navbar-brand {
+          font-size: 1rem;
+        }
+
+        .typing-text {
+          font-size: 0.7rem;
+        }
+
+        .hero-content h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero-content .lead {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+        }
+
+        .project-item, .experience-item, .education-item {
+          padding: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        h4 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        .col-md-6 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      /* Small Mobile Adjustments */
+      @media (max-width: 576px) {
+        .navbar-brand {
+          font-size: 0.9rem;
+        }
+
+        .typing-text {
+          font-size: 0.65rem;
+        }
+
+        .hero-content h1 {
+          font-size: 1.5rem;
+        }
+
+        .hero-content .lead {
+          font-size: 0.9rem;
+        }
+
+        .section-title {
+          font-size: 1.4rem;
+          padding-left: 15px;
+        }
+
+        .section-title::before {
+          font-size: 1.2rem;
+        }
+
+        .project-item, .experience-item, .education-item {
+          padding: 0.8rem;
+        }
+
+        h4 {
+          font-size: 1rem;
+        }
+
+        p, ul li {
+          font-size: 0.85rem;
+        }
+
+        section {
+          padding: 3rem 0;
+        }
+      }
+
+      /* Fix for profile photo on mobile */
+      @media (max-width: 768px) {
+        .profile-photo {
+          max-width: 150px;
+          height: auto;
+        }
+      }
+
+      /* Fix for hacking texts on mobile */
+      @media (max-width: 768px) {
+        .hacking-texts {
+          font-size: 0.7rem;
+        }
+
+        .hacking-text {
+          margin: 5px;
+        }
+      }
+
+      /* Fix for cursor effect on mobile */
+      @media (max-width: 768px) {
+        .cursor-effect {
+          display: none;
+        }
+      }
+
+      /* Navigation fixes for mobile */
+      @media (max-width: 991px) {
+        .navbar-collapse {
+          background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+          padding: 10px;
+          border-radius: 4px;
+        }
+
+        .nav-link {
+          padding: 8px !important;
+          margin: 2px 0;
+        }
+      }
+
+      /* Hero section spacing for mobile */
+      @media (max-width: 768px) {
+        .hero-section {
+          padding-top: 60px;
+        }
+
+        .hero-content {
+          padding: 20px;
+        }
+      }
+
+      /* Skills section for mobile */
+      @media (max-width: 768px) {
+        .col-md-6:first-child {
+          margin-bottom: 2rem;
         }
       }
     </style>
@@ -574,7 +778,6 @@
     <style>
       .hero-section {
         position: relative;
-        height: 100vh;
         background: linear-gradient(135deg, #1a1a1a, #333, #1a1a1a);
         display: flex;
         align-items: center;
@@ -633,5 +836,47 @@
         container.addEventListener('mouseleave', hidePhoto);
       });
     </script>
+
+    <style>
+      /* Update scroll behavior */
+      html {
+        scroll-padding-top: 60px; /* Match exactly with navbar height */
+        scroll-behavior: smooth;
+      }
+
+      /* Update Section Styles */
+      section {
+        position: relative;
+        padding: 4rem 0;
+        margin-top: 0;
+        background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+        border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+        scroll-margin-top: 60px; /* Match exactly with navbar height */
+      }
+
+      /* Hero Section specific styles */
+      .hero-section {
+        height: calc(100vh - 60px);
+        padding: 0;
+        margin-top: 60px; /* Only hero section needs this margin */
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        html {
+          scroll-padding-top: 50px; /* Match mobile navbar height */
+        }
+
+        section {
+          padding: 3rem 0;
+          scroll-margin-top: 50px; /* Match mobile navbar height */
+        }
+
+        .hero-section {
+          height: calc(100vh - 50px);
+          margin-top: 50px;
+        }
+      }
+    </style>
   </body>
 </html> 
