@@ -840,7 +840,6 @@
     <style>
       /* Update scroll behavior */
       html {
-        scroll-padding-top: 60px; /* Match exactly with navbar height */
         scroll-behavior: smooth;
       }
 
@@ -851,7 +850,7 @@
         margin-top: 0;
         background: linear-gradient(to right, #1a1a1a, #2d2d2d);
         border-bottom: 1px solid rgba(0, 102, 204, 0.2);
-        scroll-margin-top: 60px; /* Match exactly with navbar height */
+        scroll-margin-top: 60px; /* Match navbar height exactly */
       }
 
       /* Hero Section specific styles */
@@ -859,17 +858,27 @@
         height: calc(100vh - 60px);
         padding: 0;
         margin-top: 60px; /* Only hero section needs this margin */
+        scroll-margin-top: 0; /* Reset for hero section */
+      }
+
+      /* Navbar style update */
+      .navbar {
+        height: 60px;
+        padding: 0;
+        background: linear-gradient(to right, #1a1a1a, #2d2d2d) !important;
+        border-bottom: 2px solid #0066cc;
+        z-index: 1030; /* Ensure navbar stays on top */
       }
 
       /* Responsive adjustments */
       @media (max-width: 768px) {
-        html {
-          scroll-padding-top: 50px; /* Match mobile navbar height */
-        }
-
         section {
           padding: 3rem 0;
           scroll-margin-top: 50px; /* Match mobile navbar height */
+        }
+
+        .navbar {
+          height: 50px;
         }
 
         .hero-section {
