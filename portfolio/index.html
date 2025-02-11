@@ -13,12 +13,22 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Add Font Awesome in the head section -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Kadir Tuna</a>
+        <a class="navbar-brand" href="#">
+          <span class="code-symbol">&lt;</span>
+          Kadir Tuna
+          <span class="code-symbol">/&gt;</span>
+          <span class="typing-text">Software Developer</span>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,27 +43,297 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#about">
+                <i class="fas fa-terminal"></i> About
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
+              <a class="nav-link" href="#education">
+                <i class="fas fa-graduation-cap"></i> Education
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link" href="#experience">
+                <i class="fas fa-laptop-code"></i> Experience
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="#skills">
+                <i class="fas fa-code"></i> Skills
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" href="#projects">
+                <i class="fas fa-project-diagram"></i> Projects
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact">
+                <i class="fas fa-paper-plane"></i> Contact
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- Add these styles -->
+    <style>
+      .navbar {
+        padding: 0.5rem 0;
+        background: linear-gradient(to right, #1a1a1a, #2d2d2d) !important;
+        border-bottom: 2px solid #0066cc;
+        min-height: 60px;
+      }
+
+      .navbar-brand {
+        font-family: 'Consolas', monospace;
+        font-size: 1.2rem;
+        position: relative;
+        padding: 0;
+      }
+
+      .code-symbol {
+        color: #0066cc;
+        font-weight: bold;
+      }
+
+      .typing-text {
+        font-size: 0.8rem;
+        color: #00cc66;
+        display: block;
+        font-family: 'Consolas', monospace;
+        border-right: 2px solid #00cc66;
+        padding-right: 5px;
+        animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+      }
+
+      .nav-link {
+        font-family: 'Consolas', monospace;
+        margin: 0 3px;
+        padding: 6px 12px !important;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+      }
+
+      .nav-link:hover {
+        background: rgba(0, 102, 204, 0.2);
+        color: #00cc66 !important;
+      }
+
+      .nav-link i {
+        margin-right: 5px;
+        color: #0066cc;
+      }
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #00cc66 }
+      }
+
+      /* Add responsive styles */
+      @media (max-width: 991px) {
+        .navbar-brand {
+          font-size: 1.2rem;
+        }
+        
+        .typing-text {
+          font-size: 0.8rem;
+        }
+
+        .nav-link {
+          padding: 10px !important;
+        }
+      }
+    </style>
+
+    <!-- Add this style section after your existing navbar styles -->
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Consolas', monospace;
+        background: #1a1a1a;
+        color: #e0e0e0;
+      }
+
+      /* Section Styles */
+      section {
+        position: relative;
+        padding: 4rem 0;
+        background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+        border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+      }
+
+      section.bg-light {
+        background: linear-gradient(to right, #2d2d2d, #1a1a1a);
+      }
+
+      .section-title {
+        color: #00cc66;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .section-title::before {
+        content: '>';
+        position: absolute;
+        left: 0;
+        color: #0066cc;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1a1a1a) !important;
+        min-height: 100vh;
+        border-bottom: 2px solid #0066cc;
+      }
+
+      .hero-content h1 {
+        color: #e0e0e0;
+        font-size: 2.5rem;
+      }
+
+      .code-highlight {
+        color: #00cc66;
+        position: relative;
+      }
+
+      .code-highlight::before {
+        content: '"';
+        color: #0066cc;
+      }
+
+      .code-highlight::after {
+        content: '"';
+        color: #0066cc;
+      }
+
+      /* Content Styles */
+      h4 {
+        color: #0066cc;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: #b0b0b0;
+        line-height: 1.6;
+      }
+
+      small {
+        color: #00cc66;
+        font-size: 0.9rem;
+      }
+
+      /* List Styles */
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul:not(.navbar-nav) li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 0.5rem;
+        color: #b0b0b0;
+      }
+
+      ul:not(.navbar-nav) li::before {
+        content: '//';
+        position: absolute;
+        left: 0;
+        color: #0066cc;
+      }
+
+      /* Add specific styles for navbar items */
+      .navbar-nav li {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+
+      /* Project Items */
+      .project-item, .experience-item, .education-item {
+        background: rgba(0, 102, 204, 0.1);
+        padding: 1.5rem;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        border-left: 3px solid #0066cc;
+        transition: all 0.3s ease;
+      }
+
+      .project-item:hover, .experience-item:hover, .education-item:hover {
+        transform: translateX(10px);
+        background: rgba(0, 102, 204, 0.15);
+      }
+
+      /* Links */
+      a {
+        color: #00cc66;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(to right, #1a1a1a, #2d2d2d) !important;
+        border-top: 2px solid #0066cc;
+        padding: 1rem 0;
+        color: #b0b0b0;
+      }
+
+      /* Animation Classes */
+      .animate-fadeInUp {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Cursor Effect */
+      .cursor-effect {
+        background: radial-gradient(circle, rgba(0, 204, 102, 0.2), transparent);
+        border: 2px solid rgba(0, 102, 204, 0.3);
+      }
+
+      .cursor-effect.concentrated {
+        background: radial-gradient(circle, rgba(0, 204, 102, 0.4), transparent);
+        border: 2px solid rgba(0, 102, 204, 0.5);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .project-item, .experience-item, .education-item {
+          padding: 1rem;
+        }
+      }
+    </style>
 
     <!-- Hero Section with Static Background, Hacking Slicing Texts, and Interactive Cursor Effect -->
     <header class="hero-section d-flex align-items-center">
