@@ -610,18 +610,29 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-5 animate-fadeInUp">
+    <section id="about" class="section">
       <div class="container">
-        <h2 class="mb-4 section-title">About Me</h2>
-        <p>
-          Possessing a strong foundation in Electrical-Electronics and Computer Engineering, my academic journey began in Electrical-Electronics Engineering, followed by a transition to a double major in Computer Engineering. As an Erasmus student at Rezekne Technologies Academy in Latvia, I expanded my knowledge of Computer Science, working alongside peers from diverse cultural and academic backgrounds.
-        </p>
-        <p>
-          With professional experience in back-end development, I focus on Deep Learning (CNNs, LLMs), Algorithm Design, and back-end development, while continuously improving my skills in Low-Level Languages (C, C++). My long-term goal is to advance as a senior back-end developer, specializing in microservices.
-        </p>
-        <p class="mt-3">
-          <strong>Languages:</strong> Turkish (Native), English (B2 Level - YOKDIL: 76.25/100)
-        </p>
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <!-- Add profile image here -->
+            <img src="http://kadirtuna.com.tr/img/foto.png" 
+                 alt="Kadir Tuna" 
+                 class="about-profile-img img-fluid rounded-circle shadow"
+                 style="max-width: 250px; border: 3px solid #0066cc;">
+          </div>
+          <div class="col-md-8">
+            <h2 class="section-title">About Me</h2>
+            <p>
+              Possessing a strong foundation in Electrical-Electronics and Computer Engineering, my academic journey began in Electrical-Electronics Engineering, followed by a transition to a double major in Computer Engineering. As an Erasmus student at Rezekne Technologies Academy in Latvia, I expanded my knowledge of Computer Science, working alongside peers from diverse cultural and academic backgrounds.
+            </p>
+            <p>
+              With professional experience in back-end development, I focus on <span class="skill-highlight">.NET</span>, <span class="skill-highlight">Microservice</span> Architecture, and <span class="skill-highlight">REST API</span> development, while continuously improving my skills in Low-Level Languages (C, C++). My long-term goal is to advance as a senior back-end developer, specializing in microservices.
+            </p>
+            <p class="mt-3">
+              <strong>Languages:</strong> Turkish (Native), English (B2 Level - YOKDIL: 76.25/100)
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1106,6 +1117,33 @@
         .contact-item {
           font-size: 1rem;
         }
+      }
+    </style>
+
+    <style>
+      .about-profile-img {
+        transition: transform 0.3s ease;
+      }
+
+      .about-profile-img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+
+    <!-- Add styles for skill highlights -->
+    <style>
+      .skill-highlight {
+        color: #00cc66;
+        font-weight: 600;
+        padding: 2px 5px;
+        border-radius: 4px;
+        background: rgba(0, 102, 204, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .skill-highlight:hover {
+        background: rgba(0, 102, 204, 0.2);
+        transform: translateY(-2px);
       }
     </style>
   </body>
