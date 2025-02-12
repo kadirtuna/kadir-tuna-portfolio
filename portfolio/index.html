@@ -605,7 +605,7 @@
           Hi, I'm <span class="code-highlight">Kadir Tuna</span>
         </h1>
         <p class="lead animate-fadeInUp">Back-End Developer</p>
-        <img src="https://kadirtuna.com.tr/img/foto.png" alt="Kadir Tuna" class="profile-photo" />
+        <img src="images/foto.png" alt="Kadir Tuna" class="profile-photo" />
       </div>
     </header>
 
@@ -613,14 +613,13 @@
     <section id="about" class="section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-4 text-center mb-4 mb-md-0">
-            <!-- Add profile image here -->
-            <img src="http://kadirtuna.com.tr/img/foto.png" 
+          <div class="col-lg-4 text-center mb-5 mb-lg-0">
+            <img src="images/foto.png" 
                  alt="Kadir Tuna" 
                  class="about-profile-img img-fluid rounded-circle shadow"
                  style="max-width: 250px; border: 3px solid #0066cc;">
           </div>
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <h2 class="section-title">About Me</h2>
             <p>
               Possessing a strong foundation in Electrical-Electronics and Computer Engineering, my academic journey began in Electrical-Electronics Engineering, followed by a transition to a double major in Computer Engineering. As an Erasmus student at Rezekne Technologies Academy in Latvia, I expanded my knowledge of Computer Science, working alongside peers from diverse cultural and academic backgrounds.
@@ -1123,10 +1122,21 @@
     <style>
       .about-profile-img {
         transition: transform 0.3s ease;
+        margin-bottom: 20px;
       }
 
-      .about-profile-img:hover {
-        transform: scale(1.05);
+      /* Add media query for medium screens */
+      @media (max-width: 991px) {
+        .about-profile-img {
+          max-width: 200px !important;
+          margin: 0 auto 30px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .about-profile-img {
+          margin-bottom: 0;
+        }
       }
     </style>
 
