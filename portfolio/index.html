@@ -639,7 +639,7 @@
       <div class="cursor-effect"></div>
       <div class="container text-center hero-content">
         <img src="images/foto.png" alt="Kadir Tuna" class="hero-profile-photo" />
-        <h1 class="display-3 animate-fadeInDown">
+        <h1 class="display-3 animate-fadeInDown heading-trigger">
           Hi, I'm <span class="code-highlight">Kadir Tuna</span>
         </h1>
         <p class="lead animate-fadeInUp">Back-End Developer</p>
@@ -1078,6 +1078,14 @@
         border: 3px solid var(--accent-primary);
         margin-bottom: 2rem;
         object-fit: cover;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      /* Update hover effects */
+      .hero-profile-photo:hover,
+      .heading-trigger:hover ~ .hero-profile-photo {
+        transform: scale(1.1);
       }
 
       @media (max-width: 768px) {
@@ -1326,22 +1334,24 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Get all nav links
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        // Get the navbar collapse element
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        // Get the navbar toggler button
-        const navbarToggler = document.querySelector('.navbar-toggler');
+        const heading = document.querySelector('.heading-trigger');
+        const profilePhoto = document.querySelector('.hero-profile-photo');
         
-        // Add click event listener to each nav link
-        navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            // Check if the navbar is expanded (visible on mobile)
-            if (navbarCollapse.classList.contains('show')) {
-              // Programmatically click the toggler to close the navbar
-              navbarToggler.click();
-            }
-          });
+        heading.addEventListener('mouseenter', () => {
+          profilePhoto.style.transform = 'scale(1.1)';
+        });
+        
+        heading.addEventListener('mouseleave', () => {
+          profilePhoto.style.transform = 'scale(1)';
+        });
+        
+        // Keep the existing hover effect on the photo itself
+        profilePhoto.addEventListener('mouseenter', () => {
+          profilePhoto.style.transform = 'scale(1.1)';
+        });
+        
+        profilePhoto.addEventListener('mouseleave', () => {
+          profilePhoto.style.transform = 'scale(1)';
         });
       });
     </script>
