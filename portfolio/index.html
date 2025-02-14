@@ -732,7 +732,11 @@
         <a href="https://www.ayasofyazilim.com/" target="_blank" class="card-link">
           <div class="experience-item mb-4">
             <h4>Back-End Developer</h4>
-            <h5 class="company-name">Ayasofyazilim (Bilisim Vadisi)</h5>
+            <h5 class="company-name">
+              <span class="department-name">Bilisim Vadisi</span>
+              <span class="separator">|</span>
+              <span class="organization-name">Ayasofyazilim</span>
+            </h5>
             <small>February 2024 - Present</small>
             <p>
               Developed and maintained back-end services using .NET, EF Core, Microservice Architecture, Layered Architecture, ABP Framework, MongoDB, MSSQL, Redis, Docker, Linux, DDD, OOP, SaaS (Multi-Tenancy), Unit Test, Integration Test, DevOps and GitHub Actions.
@@ -743,7 +747,11 @@
         <a href="https://baykartech.com/tr/" target="_blank" class="card-link">
           <div class="experience-item mb-4">
             <h4>OOP Engineer Intern</h4>
-            <h5 class="company-name">IMEYT – Object Oriented Software, Baykar Technologies</h5>
+            <h5 class="company-name">
+              <span class="department-name">IMEYT – Object Oriented Software</span>
+              <span class="separator">|</span>
+              <span class="organization-name">Baykar Technologies</span>
+            </h5>
             <small>October 2023 - December 2023</small>
             <p>
               Designed algorithms and tested performance using C# WPF, Geoprocessing, Python, and Socket Programming.
@@ -754,7 +762,11 @@
         <a href="https://www.samm.com/" target="_blank" class="card-link">
           <div class="experience-item mb-4">
             <h4>Software Developer Intern</h4>
-            <h5 class="company-name">R&D Department, SAMM Technology</h5>
+            <h5 class="company-name">
+              <span class="department-name">R&D Department</span>
+              <span class="separator">|</span>
+              <span class="organization-name">SAMM Technology</span>
+            </h5>
             <small>July 2023 - September 2023</small>
             <p>
               Developed applications using C# ASP.NET Core, HTML/CSS, JavaScript, Bootstrap5, EF Core, and MSSQL. Utilized Docker, Docker Compose, and Docker Swarm for containerization and orchestration.
@@ -765,7 +777,9 @@
         <a href="https://www.prizmayazilim.com.tr/" target="_blank" class="card-link">
           <div class="experience-item mb-4">
             <h4>Back-End Developer Intern</h4>
-            <h5 class="company-name">Prizma Software</h5>
+            <h5 class="company-name">
+              <span class="organization-name">Prizma Software</span>
+            </h5>
             <small>June 2022 - August 2022</small>
             <p>
               Built back-end services using C# ASP.NET Core Web API, Blazor Framework, and EF Core. Applied Swagger API, Postman API, JWT Token, and Repository Patterns for API management and security.
@@ -1381,15 +1395,41 @@
 
     <style>
       .company-name {
-        color: var(--accent-secondary);
         font-size: 1.1rem;
         margin: 0.5rem 0;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .department-name {
+        color: var(--accent-secondary);
+      }
+
+      .organization-name {
+        color: var(--accent-primary);
+      }
+
+      .separator {
+        color: var(--text-primary);
+        opacity: 0.7;
       }
 
       @media (max-width: 768px) {
         .company-name {
           font-size: 1rem;
+        }
+        
+        .company-name {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.2rem;
+        }
+        
+        .separator {
+          display: none;
         }
       }
     </style>
