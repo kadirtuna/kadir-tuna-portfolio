@@ -399,4 +399,32 @@ footer p {
 .profile-photo.show {
   transform: translate(-50%, -50%) scale(1.2); /* Scale to a larger size */
   opacity: 1; /* Fade in */
+}
+
+/* Update the navbar collapse styles for mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%; /* Position it right below the navbar */
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, var(--bg-dark), var(--bg-light));
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid var(--accent-primary);
+    border-top: none;
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+
+  .navbar-nav {
+    padding: 0.5rem 0;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem !important;
+  }
 } 
