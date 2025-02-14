@@ -1048,53 +1048,54 @@
 
     <!-- Hero Section with Gradient Background -->
     <style>
-      .hero-section {
-        position: relative;
-        background: linear-gradient(135deg, var(--bg-dark), var(--bg-light), var(--bg-dark));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-
       .hero-content h1 {
-        display: inline-block;
-        white-space: nowrap;
-        margin: 0 auto;  /* Centers the h1 horizontally */
-      }
+      display: inline-block;
+      white-space: nowrap;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2; /* Ensure text stays above scaled image */
+    }
 
-      .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-content .lead {
+      position: relative;
+      z-index: 2; /* Ensure text stays above scaled image */
+    }
     </style>
 
     <style>
       .hero-profile-photo {
-        width: 150px;
+      width: 150px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-primary);
+      margin-bottom: 2rem;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Update hover effects */
+    .hero-profile-photo:hover,
+    .heading-trigger:hover ~ .hero-profile-photo {
+      transform: scale(2);
+      z-index: 0; /* Lower z-index when scaled */
+    }
+
+    @media (max-width: 768px) {
+      .hero-profile-photo {
+        width: 120px;
         height: 150px;
-        border-radius: 50%;
-        border: 3px solid var(--accent-primary);
-        margin-bottom: 2rem;
-        object-fit: cover;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
+        margin-bottom: 1.5rem;
       }
-
-      /* Update hover effects */
-      .hero-profile-photo:hover,
-      .heading-trigger:hover ~ .hero-profile-photo {
-        transform: scale(1.1);
-      }
-
-      @media (max-width: 768px) {
-        .hero-profile-photo {
-          width: 120px;
-          height: 120px;
-          margin-bottom: 1.5rem;
-        }
-      }
+    }
     </style>
 
     <style>
@@ -1338,7 +1339,7 @@
         const profilePhoto = document.querySelector('.hero-profile-photo');
         
         heading.addEventListener('mouseenter', () => {
-          profilePhoto.style.transform = 'scale(1.1)';
+          profilePhoto.style.transform = 'scale(2)';
         });
         
         heading.addEventListener('mouseleave', () => {
@@ -1347,7 +1348,7 @@
         
         // Keep the existing hover effect on the photo itself
         profilePhoto.addEventListener('mouseenter', () => {
-          profilePhoto.style.transform = 'scale(1.1)';
+          profilePhoto.style.transform = 'scale(2)';
         });
         
         profilePhoto.addEventListener('mouseleave', () => {
