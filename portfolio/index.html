@@ -666,6 +666,14 @@
             <p class="mt-3">
               <strong>Languages:</strong> Turkish (Native), English (B2 Level - YOKDIL: 76.25/100)
             </p>
+            <!-- Add Resume Button -->
+            <div class="mt-4">
+              <a href="Kadir Tuna Resume.pdf" 
+                 target="_blank" 
+                 class="resume-button">
+                <i class="fas fa-file-pdf me-2"></i>View Resume
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1195,6 +1203,40 @@
       .skill-highlight:hover {
         background: var(--blue-20);
         transform: translateY(-2px);
+      }
+    </style>
+
+    <style>
+      .resume-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .resume-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 127, 255, 0.3);
+        color: white;
+        border: 2px solid var(--accent-secondary);
+      }
+
+      .resume-button i {
+        font-size: 1.2em;
+      }
+
+      /* Mobile responsiveness for resume button */
+      @media (max-width: 768px) {
+        .resume-button {
+          padding: 8px 16px;
+          font-size: 0.9em;
+        }
       }
     </style>
 
