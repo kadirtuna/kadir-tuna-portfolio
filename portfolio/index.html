@@ -638,11 +638,11 @@
       <!-- Cursor effect element -->
       <div class="cursor-effect"></div>
       <div class="container text-center hero-content">
+        <img src="images/foto.png" alt="Kadir Tuna" class="hero-profile-photo" />
         <h1 class="display-3 animate-fadeInDown">
           Hi, I'm <span class="code-highlight">Kadir Tuna</span>
         </h1>
         <p class="lead animate-fadeInUp">Back-End Developer</p>
-        <img src="images/foto.png" alt="Kadir Tuna" class="profile-photo" />
       </div>
     </header>
 
@@ -1070,44 +1070,24 @@
       }
     </style>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const middleText = document.querySelector('.hero-content h1');
-        const profilePhoto = document.querySelector('.profile-photo');
-        let isHovering = false;
+    <style>
+      .hero-profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid var(--accent-primary);
+        margin-bottom: 2rem;
+        object-fit: cover;
+      }
 
-        const showPhoto = () => {
-          isHovering = true;
-          profilePhoto.style.display = 'block';
-          setTimeout(() => {
-            if (isHovering) {
-              profilePhoto.classList.add('show');
-            }
-          }, 10);
-        };
-
-        const hidePhoto = () => {
-          isHovering = false;
-          profilePhoto.classList.remove('show');
-          setTimeout(() => {
-            if (!isHovering) {
-              profilePhoto.style.display = 'none';
-            }
-          }, 300);
-        };
-
-        // Create a container that encompasses both the text and photo
-        const container = document.createElement('div');
-        container.style.position = 'relative';
-        middleText.parentNode.insertBefore(container, middleText);
-        container.appendChild(middleText);
-        container.appendChild(profilePhoto);
-
-        // Single event listeners for the container
-        container.addEventListener('mouseenter', showPhoto);
-        container.addEventListener('mouseleave', hidePhoto);
-      });
-    </script>
+      @media (max-width: 768px) {
+        .hero-profile-photo {
+          width: 120px;
+          height: 120px;
+          margin-bottom: 1.5rem;
+        }
+      }
+    </style>
 
     <style>
       /* Update scroll behavior */
