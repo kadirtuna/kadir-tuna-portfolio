@@ -1,3 +1,3 @@
 [submodule "portfolio/resume"]
 	path = portfolio/resume
-	url = https://github.com/kadirtuna/kadir-tuna-resume
+	url = git@github.com:kadirtuna/kadir-tuna-resume.git
