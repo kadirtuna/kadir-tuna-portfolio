@@ -179,8 +179,7 @@ a:hover {
   right: 8%;
 }
 .hacking-texts .hacking-text.right:nth-child(6) {
-  top: 30%;
-  right: 5%;
+  top: 26%;
 }
 .hacking-texts .hacking-text.right:nth-child(7) {
   top: 80%;
@@ -1245,5 +1244,9 @@ section {
 
   .hacking-text.bottom:nth-child(10) {
     top: 22%;
+  }
+
+  .hacking-text.right:nth-child(6) {
+    left: 63%;
   }
 }
