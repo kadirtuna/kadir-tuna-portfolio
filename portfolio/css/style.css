@@ -219,7 +219,7 @@ a:hover {
 /* Base text styles */
 .hacking-texts .hacking-text {
   font-size: 1rem;
-  max-width: 40%;
+  max-width: 50%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
