@@ -545,69 +545,10 @@
       integrity="sha384-..."
       crossorigin="anonymous"
     ></script>
-
-    <!-- Custom Script for Interactive Cursor Circle Effect -->
-    <script>
-      const heroSection = document.querySelector('.hero-section');
-      const cursorEffect = document.querySelector('.cursor-effect');
-
-      // Update the position of the circular effect element on mousemove
-      heroSection.addEventListener('mousemove', function(e) {
-        const rect = heroSection.getBoundingClientRect();
-        const posX = e.clientX - rect.left;
-        const posY = e.clientY - rect.top;
-        cursorEffect.style.left = posX + 'px';
-        cursorEffect.style.top = posY + 'px';
-      });
-
-      // Change the cursor effect on click
-      heroSection.addEventListener('click', function() {
-        cursorEffect.classList.add('concentrated');
-        setTimeout(() => {
-          cursorEffect.classList.remove('concentrated');
-        }, 300); // Duration of the concentrated effect
-      });
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const heading = document.querySelector('.heading-trigger');
-        const profilePhoto = document.querySelector('.hero-profile-photo');
-        
-        heading.addEventListener('mouseenter', () => {
-          profilePhoto.style.transform = 'scale(2)';
-        });
-        
-        heading.addEventListener('mouseleave', () => {
-          profilePhoto.style.transform = 'scale(1)';
-        });
-        
-        // Keep the existing hover effect on the photo itself
-        profilePhoto.addEventListener('mouseenter', () => {
-          profilePhoto.style.transform = 'scale(2)';
-        });
-        
-        profilePhoto.addEventListener('mouseleave', () => {
-          profilePhoto.style.transform = 'scale(1)';
-        });
-      });
-    </script>
-
-    <script>
-      // Get all nav links
-      const navLinks = document.querySelectorAll('.nav-link');
-      const navbarCollapse = document.querySelector('.navbar-collapse');
-      const navbarToggler = document.querySelector('.navbar-toggler');
-
-      // Add click event listener to each nav link
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          // Check if navbar is expanded (visible on mobile)
-          if (navbarCollapse.classList.contains('show')) {
-            // Trigger the navbar toggler click to close the menu
-            navbarToggler.click();
-          }
-        });
-      });
-    </script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/cursorEffect.js"></script>
+    <script src="js/profileAnimation.js"></script>
+    <script src="js/navigation.js"></script>
   </body>
 </html> 
