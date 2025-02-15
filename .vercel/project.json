@@ -1,8 +1,15 @@
 {
-    "gitRepository": {
-      "type": "github",
-      "repo": "kadirtuna/kadir-tuna-portfolio",
-      "sshKey": "@GIT_SSH_KEY"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
     }
+  ],
+  "env": {
+    "GIT_REPO": "https://github.com/kadirtuna/kadir-tuna-portfolio",
+    "GIT_SSH_KEY": "@GIT_SSH_KEY"
+  },
+  "scripts": {
+    "build": "git clone --recursive ${env.GIT_REPO}"
   }
-  
+}
