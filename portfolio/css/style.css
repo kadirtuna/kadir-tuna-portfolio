@@ -1223,3 +1223,27 @@ section {
   font-size: 0.9rem;
   margin-top: 0.2rem;
 }
+
+@media (max-width: 768px) {
+  /* Left side text positioning */
+  .hacking-texts .hacking-text.left:nth-child(3) {
+    top: 50%;
+    left: -10%;
+  }
+
+  .hacking-text.bottom:nth-child(10) {
+    top: 22%;
+    left: 5%;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .hacking-texts .hacking-text.left:nth-child(3) {
+    top: 50%;
+  }
+
+  .hacking-text.bottom:nth-child(10) {
+    top: 22%;
+  }
+}
