@@ -1,0 +1,8 @@
+{
+    "gitRepository": {
+      "type": "github",
+      "repo": "kadirtuna/kadir-tuna-portfolio",
+      "sshKey": "@GIT_SSH_KEY"
+    }
+  }
+  
