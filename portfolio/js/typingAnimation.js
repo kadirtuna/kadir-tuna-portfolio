@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.querySelector('.typing-text');
-    const text = typingText.textContent;
+    const texts = ["Software Developer", "Back-End Developer"];
+    let textIndex = 0;
     
     function typeAnimation() {
         let displayText = '';
         let currentIndex = 0;
         
         function type() {
-            if (currentIndex < text.length) {
-                displayText += text[currentIndex];
+            if (currentIndex < texts[textIndex].length) {
+                displayText += texts[textIndex][currentIndex];
                 // Create a span for the cursor and position it after the text
                 typingText.innerHTML = displayText + '<span class="cursor">|</span>';
                 currentIndex++;
@@ -25,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 typingText.innerHTML = displayText + '<span class="cursor">|</span>';
                 setTimeout(erase, 50); // Adjust erasing speed here
             } else {
+                // Switch to the next text
+                textIndex = (textIndex + 1) % texts.length;
                 setTimeout(() => {
                     currentIndex = 0;
                     type(); // Restart typing
