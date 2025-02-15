@@ -13,3 +13,14 @@ navLinks.forEach(link => {
     }
   });
 });
+
+// Add click event listener to document
+document.addEventListener('click', (event) => {
+  // Check if navbar is expanded and click is outside the navbar
+  if (navbarCollapse.classList.contains('show') && 
+      !navbarCollapse.contains(event.target) && 
+      !navbarToggler.contains(event.target)) {
+    // Trigger the navbar toggler click to close the menu
+    navbarToggler.click();
+  }
+});
